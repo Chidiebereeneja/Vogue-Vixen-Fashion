@@ -1,0 +1,1108 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+@font-face {
+  src: url(fonts/ubuntu/Ubuntu-Bold.ttf);
+  font-family: ubuntu-bold;
+}
+@font-face {
+  src: url(fonts/Roboto/Roboto-Regular.ttf);
+  font-family: Roboto;
+}
+body{
+  width: 100%;
+}
+#headerHead {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+}
+#headerHead nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#headerHead nav ul {
+  list-style-type: none;
+}
+img[src="images/vogue-vixen-logo - Copy.png"] {
+  height: 35px;
+}
+#headerHead nav ul li a{
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#headerHead nav ul li a:hover {
+  color: rgba(0, 139, 139, 0.904);
+}
+.navBarLink {
+  color: black;
+}
+.offcanvasImg {
+  height: 25px !important;
+}
+.offcanvasHover a {
+  color: dodgerblue;
+  font-size: 16px !important;
+  border-bottom: 1px solid grey;
+}
+#main {
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: 
+  "section1 section1 section1 section1 section1 section1 section1"
+  "section2 section2 section2 section2 section2 section2 section2";
+}
+#section1{
+  grid-area: section1;
+  position: relative;
+  top: -10px;
+  background-color: rgb(7, 7, 7);
+  overflow: hidden;
+}
+#carouselExampleAutoplaying {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#caroSlide1 {
+  width: 100%;
+  height: 570px;
+  padding: 0px;
+  margin: 0px;
+}
+#caroSlide2 img,
+#caroSlide3 img{
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+#navMain{
+  width: 100%;
+  padding: 10px;
+  position: absolute; 
+  top: 10px;
+  left: 40px;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-column-gap: 20px;
+  place-items: center;
+  margin: 10px auto;
+  margin-left: 30px;
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+#navMain a {
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  color: rgb(252, 252, 252);
+  padding: 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all .3s linear;
+}
+#navMain a:hover{
+  border: 1px solid rgb(252, 252, 252);
+}
+#navMain + aside {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+#navMain + aside article{
+  width: 70%;
+}
+#navMain + aside article h1{
+  margin-top: 60px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+#navMain + aside article p {
+  text-align: center;
+  letter-spacing: 0.5px;
+  width: 70%;
+  margin: 5px auto;
+  color: #e2dfdf;
+  font-weight: 600;
+  font-size: 17px;
+}
+#navMain + aside article a{
+  text-decoration: none;
+  width: 150px;
+  padding: 8px;
+  background-color: #db2616c0;
+  color: #fdfdfd;
+  margin: 20px auto;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  transition: all .3s linear;
+}
+#navMain + aside article a:hover{
+  transform: scale(1.1);
+}
+
+ #section2 {
+  grid-area: section2;
+  width: 100%;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: 
+  'section-div section-div section-div section-div section-div'
+  'subsection subsection subsection subsection subsection'
+  'BagsArticle BagsArticle BagsArticle BagsArticle BagsArticle'
+  'sectionForBags sectionForBags sectionForBags sectionForBags sectionForBags';
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+#section2 > article{
+  grid-area: section-div;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-areas: 
+  'KidsWearImage KidsWearImage KidsWearImage KidsWearside KidsWearside'
+  ;
+}
+#section2 > article > img[src="images/Kids1.jpg"]  {
+  grid-area: KidsWearImage;
+  object-fit: contain;
+  aspect-ratio: 14/11;
+  margin: 70px 0px;
+  margin-right: 0px;
+  border-radius: 5px;
+}
+#section2 > article > img[src="images/Kids1.jpg"] + article {
+  grid-area: KidsWearside;
+  align-self: center;
+  justify-self: end;
+}
+#section2 > article > img[src="images/Kids1.jpg"] + article button {
+  font-weight: 600;
+  transition: all .2s linear;
+}
+#section2 > article > img[src="images/Kids1.jpg"] + article button:hover {
+  transform: translateY(5px);
+}
+#section2 > article + section {
+  grid-area: subsection;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px 20px;
+  grid-template-areas:
+   "figureImage1 figureImage2 figureImage3 figureImage4 figureImage5 figureImage6"
+   "figureImage7 figureImage8 figureImage9 figureImage10 figureImage11 figureImage12";
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#section2 > article + section figure img + div h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+#section2 > article + section figure:nth-child(1){
+  grid-area: figureImage1;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(2){
+  grid-area: figureImage2;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(3){
+  grid-area: figureImage3;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(4){
+  grid-area: figureImage4;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(5){
+  grid-area: figureImage5;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(6){
+  grid-area: figureImage6;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(7){
+  grid-area: figureImage7;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(8){
+  grid-area: figureImage8;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(9){
+  grid-area: figureImage9;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(10){
+  grid-area: figureImage10;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(11){
+  grid-area: figureImage11;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(12){
+  grid-area: figureImage12;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+#section2 > article + section figure:nth-child(1) img,
+#section2 > article + section figure:nth-child(2) img, 
+#section2 > article + section figure:nth-child(3) img,
+#section2 > article + section figure:nth-child(4) img, 
+#section2 > article + section figure:nth-child(5) img,
+#section2 > article + section figure:nth-child(6) img,
+#section2 > article + section figure:nth-child(7) img,
+#section2 > article + section figure:nth-child(8) img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0px auto;
+}
+#section2 > article + section figure:nth-child(9) img,
+#section2 > article + section figure:nth-child(10) img,
+#section2 > article + section figure:nth-child(11) img,
+#section2 > article + section figure:nth-child(12) img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0px auto;
+}
+#section2 > article + section figure h5 {
+  font-size: 15px;
+}
+#section2 > article + section figure p{
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+#starsCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #D98E04;
+  font-size: 12px;
+}
+#section2 > article + section figure div button {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  transition: all .3s linear;
+}
+#section2 > article + section figure:hover .showHover{
+  transform: translateY(6px);
+}
+.shadows {
+  box-shadow: 0px 0px 4px grey,
+      1px 1px 4px grey,
+      2px 2px 4px grey;
+  transform: scale(1);
+  transition: all .5s linear;
+}
+#section2 > article + section + article{
+  grid-area: BagsArticle;
+  border-radius: 3px;
+  display: flex; 
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+  padding-top: 20px;
+}
+#section2 > article + section + article > aside {
+  width: 40%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+#section2 > article + section + article > aside  h2{
+  display: flex;
+  justify-content: center;
+  font-weight: 650;
+}
+#section2 > article + section + article > aside  p {
+  display: flex;
+  justify-content: center;
+}
+#section2 > article + section + article > aside  p + button {
+  font-weight: 600;
+  transition: all .2s linear;
+}
+#section2 > article + section + article > aside  p + button:hover {
+  transform: translateY(5px);
+}
+#section2 > article + section + article > aside + figure  {
+  overflow-x: hidden;
+}
+#section2 > article + section + article > aside + figure img {
+  height: 600px;
+  width: fit-content;
+  margin-left: 20px;
+}
+#footer{
+  background-color: #d982822c;
+  color: aliceblue;
+  width: 100%;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-row-gap: 40px;
+  grid-template-areas: 
+  'FooterSection FooterSection FooterSection FooterSection'
+  'FooterNav FooterNav FooterNav FooterNav'
+  'Footerarticle Footerarticle Footerarticle Footerarticle'
+  'FooterLastFooter FooterLastFooter FooterLastFooter FooterLastFooter';
+}
+#footer > section {
+  grid-area: FooterSection;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-column-gap: 10px;
+  grid-template-areas:
+  'FSecAside FSecAside FSecForm FSecForm FSecForm' 
+  ;
+}
+#footer > section  aside{
+  grid-area: FSecAside;
+  margin-top: 30px;
+  color: #000;
+}
+#footer > section  aside h2 {
+  width: 80%;
+  color: #030303;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#footer > section  aside p  {
+  width: 80%;
+  color: #030303;
+  font-weight: 400;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#footer > section  form{
+  grid-area: FSecForm;
+  background-color: #202020;
+  width: 70%;
+  margin-left: 10%;
+  box-shadow: 0px 0px 5px gray;
+  padding: 20px 5%;
+  border-radius: 4px;
+}
+#footer > section  form h3 {
+  color: #F2C094;
+}
+#footer > section  form label[for="EmailCheckBox"] {
+  display: block;
+  margin-top: 30px;
+  margin-left: 4px;
+  font-size: 18px;
+}
+#footer > section  form input[type="email"],
+#footer > section  form input[type="password"] {
+  display: block;
+  width: 90%;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+form input[type="email"]:valid {
+  box-shadow: 0px 0px 5px green;
+}
+#footer > section  form label[for="passWordLabel"] {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+#footer > section  form input[type="checkbox"] {
+  width: 0px;
+  margin: 0px;
+  opacity: 0;
+}
+#footer > section  form label[for="checkboxPolicy"] {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  background-image: url(images/checks.png);
+  background-repeat: no-repeat;
+  background-position: 0 -98px;
+  line-height: 24px;
+  cursor: pointer;
+}
+#footer > section  form label[for="checkboxPolicy"] span {
+  margin-left: 4px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+input:checked + label[for="checkboxPolicy"] {
+  background-position: 0 -64px !important;
+  color: #ce1010;
+}
+#footer > section  form label[for="checkboxPolicy"] + p {
+  margin-left: 10px;
+}
+#footer > section  form label[for="checkboxPolicy"] + p a {
+  color: aliceblue;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.create:hover  {
+  color: #8a8a8b !important;
+}
+#footer > section  form input[type="submit"] {
+  display: block;
+  width: 100px;
+  margin: 20px 20%;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+#footer > section  form input[type="submit"] + p {
+  width: 100%;
+  padding: 10px;
+  line-height: 25px;
+}
+#footer > section  form input[type="submit"] + p a {
+  color: aliceblue;
+  font-weight: 650;
+  letter-spacing: 0.6px;
+  transition: all .2s linear;
+}
+#footer > section  form input[type="submit"] + p a:hover {
+ color: rgb(158, 159, 160);
+}
+
+#footer section + nav {
+  grid-area: FooterNav;
+  background-color: #fff;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+#footer section + nav ul {
+  width: 100%;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+  grid-row-gap: 25px;
+  grid-template-areas: 
+  'list1 list1 list1 list2 list2 list2'
+  'list1 list1 list1 list3 list3 list3';
+}
+#HoverEffect{
+  grid-area: list1;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(20px, 50px);
+  grid-auto-flow: row;
+
+}
+#HoverEffectS{
+  grid-area: list1;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(20px, 50px);
+  grid-auto-flow: row;
+}
+#HoverEffect h4,
+#HoverEffectS h4 {
+  font-family: ubuntu;
+  text-transform: uppercase;
+  font-size: 25px;
+  place-self: center;
+  color: rgb(4, 38, 71);
+}
+#HoverEffect a,
+#HoverEffectS a {
+  place-self: center;
+  color: dodgerblue;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+#HoverEffect a span.FromDown,
+#HoverEffectS a span.FromDown{
+  height: 3px;
+  width: 100%;
+  padding-top: 1.5px;
+  background-image: linear-gradient(to right, orangered, dodgerblue, orangered);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translateY(14px);
+  opacity: 0;
+  transition: all .3s linear;
+}
+#HoverEffect a:hover span.FromDown,
+#HoverEffectS a:hover span.FromDown {
+  transform: translateY(1px);
+  opacity: 1;
+}
+
+#footer section + nav ul li:nth-child(2) {
+  grid-area: list2;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#footer section + nav ul li:nth-child(3) {
+  grid-area: list3;
+  color: rgb(4, 38, 71);
+}
+#footer section + nav ul li:nth-child(3) strong {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+#footer section + nav ul li:nth-child(3) figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+#footer section + nav ul li:nth-child(3) figure img {
+  height: 30px;
+  transition: all .2s linear;
+}
+#footer section + nav ul li:nth-child(3) figure img:hover{
+  transform: scale(0.9);
+}
+
+
+#footer section + nav + article{
+  grid-area: Footerarticle;
+  width: 100%;
+  margin-top: -40px;
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer section + nav + article h2 {
+  width: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
+  color: #030303;
+  font-size: 24px;
+}
+#stars{
+  font-size: 14px;
+  display: flex;
+  gap: 3px;
+  color: #D98E04;
+}
+#footer section + nav + article h2 + div {
+  width: 500px;
+  min-height: 350px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+#footer section + nav + article h2 + div p:nth-child(1),
+#footer section + nav + article h2 + div p:nth-child(2),
+#footer section + nav + article h2 + div p:nth-child(3),
+#footer section + nav + article h2 + div p:nth-child(4){
+  width: 75%;
+  color: #030303;
+  margin: auto;
+  margin-top: 30px;
+  padding: 3px;
+  font-size: 17px;
+  line-height: 25px;
+}
+#footer section + nav + article h2 + div p:nth-child(1) {
+  position: absolute;
+  animation: pFirstChild 20s linear alternate infinite;
+}
+
+@keyframes pFirstChild {
+  0%{ transform: translateX(0px);}
+  5%{transform: translateX(0px);}
+  10%{transform: translateX(0px);}
+  15%{ transform: translateX(0px);}
+  20%{ transform: translateX(0px);}
+  25%{ transform: translateX(-600px);}
+  30%{ transform: translateX(-600px);}
+  35%{ transform: translateX(-600px);}
+  40%{ transform: translateX(-600px);}
+  45%{ transform: translateX(-600px);}
+  50%{ transform: translateX(-600px)}
+  55%{ transform: translateX(-600px)}
+  60%{ transform: translateX(-600px)}
+  65%{ transform: translateX(-600px)}
+  70%{ transform: translateX(-600px)}
+  75%{ transform: translateX(-600px)}
+  80%{ transform: translateX(-600px)}
+  85%{ transform: translateX(-600px)}
+  90%{ transform: translateX(-600px)}
+  95%{ transform: translateX(-600px)}
+  100%{ transform: translateX(-600px)}
+}
+#footer section + nav + article h2 + div p:nth-child(2) {
+  position: absolute;
+  transform: translateX(600px);
+  animation: pSecondChild 20s linear alternate infinite;
+}
+@keyframes pSecondChild {
+  0%{ transform: translateX(600px);}
+  5%{transform: translateX(600px);}
+  10%{transform: translateX(600px);}
+  15%{ transform: translateX(600px);}
+  20%{ transform: translateX(600px);}
+  25%{ transform: translateX(0px);}
+  30%{ transform: translateX(0px);}
+  35%{ transform: translateX(0px);}
+  40%{ transform: translateX(0px);}
+  45%{ transform: translateX(0px);}
+  50%{ transform: translateX(-600px)}
+  55%{ transform: translateX(-600px)}
+  60%{ transform: translateX(-600px)}
+  65%{ transform: translateX(-600px)}
+  70%{ transform: translateX(-600px)}
+  75%{ transform: translateX(-600px)}
+  80%{ transform: translateX(-600px)}
+  85%{ transform: translateX(-600px)}
+  90%{ transform: translateX(-600px)}
+  95%{ transform: translateX(-600px)}
+  100%{ transform: translateX(-600px)}
+}
+#footer section + nav + article h2 + div p:nth-child(3) {
+  position: absolute;
+  transform: translateX(600px);
+  animation: pThirdChild 20s linear alternate infinite;
+}
+@keyframes pThirdChild {
+  0%{ transform: translateX(600px);}
+  5%{transform: translateX(600px);}
+  10%{transform: translateX(600px);}
+  15%{ transform: translateX(600px);}
+  20%{ transform: translateX(600px);}
+  25%{ transform: translateX(600px);}
+  30%{ transform: translateX(600px);}
+  35%{ transform: translateX(600px);}
+  40%{ transform: translateX(600px);}
+  45%{ transform: translateX(600px);}
+  50%{ transform: translateX(0px)}
+  55%{ transform: translateX(0px)}
+  60%{ transform: translateX(0px)}
+  65%{ transform: translateX(0px)}
+  70%{ transform: translateX(0px)}
+  75%{ transform: translateX(0px)}
+  80%{ transform: translateX(-600px)}
+  85%{ transform: translateX(-600px)}
+  90%{ transform: translateX(-600px)}
+  95%{ transform: translateX(-600px)}
+  100%{ transform: translateX(-600px)}
+}
+#footer section + nav + article h2 + div p:nth-child(4) {
+  position: absolute;
+  transform: translateX(600px);
+  animation: pFourthChild 20s linear alternate infinite;
+}
+@keyframes pFourthChild {
+  0%{ transform: translateX(600px);}
+  5%{transform: translateX(600px);}
+  10%{transform: translateX(600px);}
+  15%{ transform: translateX(600px);}
+  20%{ transform: translateX(600px);}
+  25%{ transform: translateX(600px);}
+  30%{ transform: translateX(600px);}
+  35%{ transform: translateX(600px);}
+  40%{ transform: translateX(600px);}
+  45%{ transform: translateX(600px);}
+  50%{ transform: translateX(600px)}
+  55%{ transform: translateX(600px)}
+  60%{ transform: translateX(600px)}
+  65%{ transform: translateX(600px)}
+  70%{ transform: translateX(600px)}
+  75%{ transform: translateX(600px)}
+  80%{ transform: translateX(0px)}
+  85%{ transform: translateX(0px)}
+  90%{ transform: translateX(0px)}
+  95%{ transform: translateX(0px)}
+  100%{ transform: translateX(0px)}
+}
+#footer section + nav + article h2 + div p em::before,
+#footer section + nav + article h2 + div p em::after{
+  content: '"';
+  font-size: 30px;
+}
+#footer section + nav + article + footer{
+  background-color: #fff;
+  grid-area: FooterLastFooter;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 70px;
+  margin-top: -40px;
+  padding-top: 70px;
+}
+#footer section + nav + article + footer nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  place-items: center;
+  grid-template-areas:
+  'footerlink1 footerlink2 footerlink3 footerlink4' ;
+}
+#footer section + nav + article + footer nav a {
+  text-decoration: none;
+  padding: 7px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500; 
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  color: #030303;
+  border: 1px solid #D96459;
+  border-radius: 5px;
+  box-shadow: 2px 0px 5px transparent;
+  transition: all .3s linear;
+}
+#footer section + nav + article + footer nav a:hover{
+  box-shadow: 0px 0px 5px #000;
+  border: 1px solid transparent;
+  transform: translateY(-10px);
+}
+#footer section + nav + article + footer nav a:nth-child(1) {
+  grid-area: footerlink1;
+}
+#footer section + nav + article + footer nav a:nth-child(2) {
+  grid-area: footerlink2;
+}
+#footer section + nav + article + footer nav a:nth-child(3) {
+  grid-area: footerlink3;
+}
+#footer section + nav + article + footer nav a:nth-child(4) {
+  grid-area: footerlink4;
+}
+#footer section + nav + article + footer section {
+  background-color: #fff;
+ padding: 10px;
+ padding-top: 20px;
+ word-spacing: 1px;
+ letter-spacing: 0.5px;
+}
+#footer section + nav + article + footer section  p {
+  background-color: #d9645918;
+  color: #030303;
+  padding: 20px;
+  margin-top: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  text-align: center; 
+}
+@media (max-width: 970px) {
+  #section2 > article + section figure {
+    height: 380px !important;
+  }
+}
+ @media (max-width: 850px) {
+  #section2 > article + section {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+     "figureImage1 figureImage2 figureImage3 figureImage4 figureImage5" 
+     "figureImage6 figureImage7 figureImage8 figureImage9 figureImage10" 
+     "figureImage11 figureImage12 . . ."
+    ;
+  }
+  #section2 > article + section figure {
+    height: 320px !important;
+  }
+  .disppear {
+    display: none !important;
+  }
+  #footer > section {
+    grid-template-areas:
+    'FSecForm FSecForm FSecForm FSecForm FSecForm' 
+    ;
+  }
+  #footer > section form {
+    width: 80% !important;
+    place-self: center;
+  }
+  #footer section + nav ul {
+    grid-template-areas: 
+    'list1 list1 list1 list1 list1 list1'
+    'list2 list2 list2 list3 list3 list3';
+  }
+  #HoverEffect{
+    height: 400px;
+  }
+  #section1 {
+    grid-area: section1;
+    height: 600px;
+  }
+  #navMain {
+    margin-left: 0px !important;
+  }
+  #navMain + aside {
+    grid-template-areas: 
+    'Article1 Article1 Article1 Article1 Figure1'
+    'Article1 Article1 Article1 Article1 Figure1';
+  }
+  #navMain + aside h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+  }
+  #carouselExampleAutoplaying,
+  #caroSlide1,
+  #caroSlide2,
+  #caroSlide3 {
+    height: 100%;
+  }
+  #navMain + aside  article h1 {
+    margin-top: 70px;
+  }
+  img[src="images/Bacground-vogue.png"],
+  img[src="images/Bacground-vogue2.png"] {
+    height: 100%;
+  }
+  #navMain + aside article p {
+    text-align: start;
+  }
+}
+
+@media (max-width: 768px) {
+  #section2 > article{
+    grid-template-areas: 
+    'KidsWearImage KidsWearImage KidsWearImage KidsWearImage KidsWearImage'
+    'KidsWearside KidsWearside KidsWearside KidsWearside KidsWearside';
+  }
+  #section2 > article > img[src="images/Kids1.jpg"]  {
+    aspect-ratio: 11/7;
+    margin: 70px 20%;
+  }
+  #section2 > article > img[src="images/Kids1.jpg"] + article {
+    width: 90%;
+    margin-bottom: 60px;
+    margin-top: -50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .UnixStyle {
+    margin: 0px auto;
+  }
+  #section2 > article + section figure div button{
+    width: 100%;
+  }
+  #section2 > article + section {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+     "figureImage1 figureImage1 figureImage1 figureImage2 figureImage2 figureImage2 figureImage3 figureImage3 figureImage3"
+     "figureImage4 figureImage4 figureImage4 figureImage5 figureImage5 figureImage5 figureImage6 figureImage6 figureImage6"
+     "figureImage7 figureImage7 figureImage7 figureImage8 figureImage8 figureImage8 figureImage9 figureImage9 figureImage9"
+     "figureImage10 figureImage10 figureImage10 figureImage11 figureImage11 figureImage11 figureImage12 figureImage12 figureImage12"
+    ;
+  }
+  #section2 > article + section + article{
+    flex-flow: column;
+  }
+  #section2 > article + section + article > aside {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  #section2 > article + section + article > aside + figure  {
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #section2 > article + section + article > aside + figure img {
+    max-height: 100%;
+    height: 500px;
+  }
+  #footer > section  aside{
+    display: none;
+  }
+  #footer{
+    color: #000;
+  }
+  #footer > section {
+    grid-template-areas:
+    'FSecForm FSecForm FSecForm FSecForm FSecForm' 
+    ;
+  }
+  #footer > section  form{
+    grid-area: FSecForm;
+    width: 100% !important;
+    margin-left: 0px;
+    color: aliceblue;
+  }
+  #footer section + nav ul {
+    grid-template-areas: 
+    'list1 list1 list1 list1 list1 list1'
+    'list2 list2 list2 list2 list2 list2'
+    'list3 list3 list3 list3 list3 list3';
+  }
+}
+
+@media (max-width: 575px) {
+  #footer section + nav + article h2 + div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #footer section + nav + article h2 + div p:nth-child(1),
+  #footer section + nav + article h2 + div p:nth-child(2),
+  #footer section + nav + article h2 + div p:nth-child(3),
+  #footer section + nav + article h2 + div p:nth-child(4){
+    width: 80%;
+  }
+  #footer section + nav + article h2 {
+    width: 100%;
+    justify-content: center;
+  }
+  #footer section + nav + article + footer nav {
+    grid-row-gap: 30px;
+    grid-template-areas:
+    'footerlink1 footerlink1 footerlink3 footerlink3' 
+    'footerlink2 footerlink2 footerlink4 footerlink4';
+  }
+  #HoverEffect a,
+  #HoverEffectS a{  
+    font-size: 15px;
+    text-align: center;
+  }
+  #HoverEffect h4,
+  #HoverEffectS h4{  
+    font-size: 18px;
+  }
+  img[src="images/vogue-vixen-logo - Copy.png"] {
+    height: 28px;
+    margin-left: -20px;
+  }
+  #navMain + aside {
+    left: 0px;
+  }
+  #navMain + aside article{
+    width: 100%;
+    padding-left: 10px;
+  }
+  #navMain + aside  article h1 {
+    margin-top: 40px;
+    font-size: 22px;
+  }
+  
+  #navMain + aside  article  p {
+    text-align: start;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@media (max-width: 470px) {
+  #section2 > article + section {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+     "figureImage1 figureImage1  figureImage2 figureImage2"
+     "figureImage3 figureImage3 figureImage4 figureImage4"
+     "figureImage5 figureImage5 figureImage6 figureImage6"
+     "figureImage7 figureImage7  figureImage8 figureImage8 "
+     "figureImage9 figureImage9  figureImage10 figureImage10 "
+     "figureImage11 figureImage11  figureImage12 figureImage12 "
+    ;
+  }
+  #section2 > article > img[src="images/Kids1.jpg"]  {
+    aspect-ratio: 0;
+    margin: 70px 0px;
+  }
+  #footer section + nav + article h2 + div {
+    min-height: 400px;
+  }
+  
+  #navMain + aside h1 {
+    margin-top: 70px;
+  }
+  #section2 > article + section + article > aside + figure img {
+    max-height: 600px;
+    width: 100%;
+    object-fit: contain;
+    margin-left: 20px;
+  }
+  
+}
+
+@media (max-width: 330px) {
+  #toggleShift {
+   position: relative;
+   right: 10vw;
+  }
+  #section2 > article + section figure {
+    height: 380px !important;
+  }
+}
+  
